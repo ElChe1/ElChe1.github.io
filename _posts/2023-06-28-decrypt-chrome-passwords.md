@@ -25,7 +25,7 @@ Cabe recalcar que esta herramienta es solo para fines educativos, para que apren
 Empezamos entrando a cualquier página, por ejemplo HTB, iniciamos sesión y arriba a la derecha nos sale una pestaña para guardar la contraseña y nosotros la guardamos. Y aquí es donde vamos a caer, guardando la contraseña en el navegador y corriendo el peligro de ser hackeados y nos roben nuestras contraseñas.
 
 <p align="center">
-<img src="/assets/images/decrypt-chrome-passwords/pagina_htb.png">
+<img src="/assets/images/decrypt-chrome-passwords/pagina_htb.jpg">
 </p>
 
 
