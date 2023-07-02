@@ -1,0 +1,501 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Como usar un IPLogger - Ciberseguridad y Hacking Ético</title>
+<meta name="description" content="¿Te gustaría aprender a usar un IPLogger para conseguir la IP de la gente?. En este articulo te lo enseño.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Ciberseguridad y Hacking Ético">
+<meta property="og:title" content="Como usar un IPLogger">
+<meta property="og:url" content="http://localhost:4000/iplogger/">
+
+
+  <meta property="og:description" content="¿Te gustaría aprender a usar un IPLogger para conseguir la IP de la gente?. En este articulo te lo enseño.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/seeker/inicio.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-05-07T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/iplogger/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "csh",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Ciberseguridad y Hacking Ético Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+                
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/" >Artículos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categorías</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Etiquetas</a>
+            </li><li class="masthead__menu-item">
+              <a href="/videos/" >Vídeos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/buscador/" >Buscador</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >Contacto</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+    
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Como usar un IPLogger</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/avatar.png" alt="Csh" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Csh</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Learning CyberSecurity
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Spain</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/Csh_178" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/ElChe1" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Como usar un IPLogger">
+    <meta itemprop="description" content="¿Te gustaría aprender a usar un IPLogger para conseguir la IP de la gente?. En este articulo te lo enseño.">
+    <meta itemprop="datePublished" content="May 07, 2023">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Como usar un IPLogger
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p class="page__meta">
+          
+            <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2023-05-07T00:00:00+02:00">May 07, 2023 </time>&emsp;
+          
+          
+        </p>
+        <p><img src="/assets/images/seeker/" alt="" /></p>
+
+<h2 id="que-es-un-iplogger">¿Que es un IPLogger?</h2>
+
+<p>IPLogger es una herramienta en línea que permite a los usuarios rastrear la dirección IP de la víctima. Es decir, la herramienta loggea su dirección IP a través de una dirección del usuario y podemos obtener mucha información. Es muy utilizada para usos mal intencionados para rastrear la dirección IP sin el consentimiento de la persona, pero recordar que somo éticos.</p>
+
+<p>Cabe recalcar que esta herramienta es solo para fines educativos, para que aprendáis del mundo del Hacking Ético. Recordad no usar esta herramienta contra una persona, ya que es ilegal.</p>
+
+<h2 id="como-instalar-la-herramienta">¿Como instalar la herramienta?</h2>
+
+<p>Lo primero que tenemos que hacer es clonar el repositorio, volveremos a usar el Git de <strong>Euronymou5</strong>, puesto que tiene muy buenas herramientas.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+git clone https://github.com/Euronymou5/IPlogger
+
+</code></pre></div></div>
+
+<p>Una vez clonado pondremos el primer comando, por el hecho de que son requisitos para la herramienta.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">sudo </span>apt <span class="nb">install </span>wget <span class="nt">-y</span>
+
+<span class="nb">sudo </span>apt <span class="nb">install </span>python3 <span class="nt">-y</span>
+
+<span class="nb">sudo </span>apt <span class="nb">install </span>php <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Ya todos los requisitos instalados, nos movemos al directorio y ejecutamos el programa.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">python3</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span>
+
+</code></pre></div></div>
+<p align="center">
+<img src="/assets/images/iplogger/inicioporgrama.png" />
+</p>
+
+<p>Pondremos la opción número uno, ya que es la única que tenemos y vemos que se nos está iniciando el servidor PHP.</p>
+
+<p>Ahora vemos que nos salta una pregunta, si queremos usar la página por defecto que sería el Error 404 HTML. En mi caso le diré que no, porque así podemos personalizar el link. Ingresamos el link para redirigir a la víctima, yo pondré mi página web.</p>
+
+<p align="center">
+<img src="/assets/images/iplogger/link.png" />
+</p>
+
+<p>Ahora que ya tenemos nuestro link, lo vamos a probar poniéndolo en nuestro navegador. Vemos que nos redirige a mi página web y para el lado de la víctima todo normal.</p>
+
+<p align="center">
+<img src="/assets/images/iplogger/pagina.png" />
+</p>
+
+<p>Desde nuestro lado vemos en la terminal que ya se nos ha generado diferente información.</p>
+
+<p align="center">
+<img src="/assets/images/iplogger/ip.jpg" />
+</p>
+
+<p>En algunos casos la herramienta no nos dará el link por algún bug o algo. Se puede solucionar abriendo en otra terminal y poniendo el comando y en las últimas líneas tendremos nuestro link.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ssh <span class="nt">-R</span> 80:localhost:8080 nokey@localhost.run <span class="nt">-T</span> <span class="nt">-n</span>
+
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#ip" class="page__taxonomy-item" rel="tag">IP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#linux" class="page__taxonomy-item" rel="tag">Linux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#utilidades" class="page__taxonomy-item" rel="tag">Utilidades</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#herramientas" class="page__taxonomy-item" rel="tag">Herramientas</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Fecha:</strong> <time datetime="2023-05-07T00:00:00+02:00">May 07, 2023</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/seeker/" class="pagination--pager" title="Como usar la herramienta Seeker
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 csh</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
