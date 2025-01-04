@@ -9,7 +9,9 @@ tags: [redes, packet_tracer]
 - Conocer el funcionamiento de la herramienta TRACEROUTE
 
 ### Topologia
-<img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/topologia.png" style="border-radius: 15px;">
+<img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/topologia.png" 
+alt="Topologia Packet Tracer"
+style="border-radius: 15px;">
 
 <a href="https://github.com/ElChe1/blog/blob/main/files/packet_tracer" download>Descargar archivo</a>
 
@@ -29,7 +31,7 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
 1. Haga clic en Sales (Ventas) y en la ficha Desktop > Command Prompt (Escritorio > Símbolo del sistema). Use el comando ipconfig para revisar la configuración de la dirección IP de Sales.
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/Sales-Command-Prompt.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/Sales-Command-Prompt.png" alt="Prompt Sales Command" style="border-radius: 15px;">
 
 2. La dirección del nuevo servidor web es b2server.pt.pka. Introduzca el siguiente comando nslookup para descubrir la dirección IP de b2server:
 
@@ -39,7 +41,7 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
     - ¿Qué dirección devolvió el comando para b2server? <kbd>172.16.0.3</kbd>
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/b_nslookup_b2server.pt.pka.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/b_nslookup_b2server.pt.pka.png" alt="Nslooup b2server" style="border-radius: 15px;">
 
 3. Introduzca el comando tracert para determinar la ruta desde Sales hasta b2server.pt.pka.
     
@@ -47,7 +49,7 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
     PC> tracert b2server.pt.pka
     ```
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/c_tracert_b2server.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/c_tracert_b2server.png" alt="Tracert b2server" style="border-radius: 15px;">
 
     > El tracert és un comando que lo que hace es ver los saltos que tenemos desde Ventas asta nuestro destino b2server.pt.pka, es decir 5 saltos . Los saltos hace referencia a los servidores, routers o switches a los cuales nos tenemos que conectar para llegar a nuestro destino. 
 
@@ -59,7 +61,7 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
 5. Ya está conectado al router R4. Emita el comando traceroute en el router utilizando la dirección para b2server determinada en el paso b. 
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/e_traceroute.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/e_traceroute.png" alt="Traceroute" style="border-radius: 15px;">
 
     - ¿Cuál es la diferencia entre el comando traceroute en el router y el comando tracert en la PC? 
     <kbd> El propósito de traceroute y tracert es el mismo, sus diferencias principales son la compatibilidad con el sistema operativo y los protocolos que utilizan por defecto. Ambos son útiles para diagnosticar problemas de conexión y para entender la estructura de la red entre el origen y el destino. 
@@ -74,7 +76,7 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
     - Según el resultado del comando, ¿qué interfaz se utiliza para alcanzar el siguiente dispositivo en el resultado de lista del comando tracert? <kbd>GigabitEthernet0/0</kbd>
 
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/f_show_ip.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/f_show_ip.png" alt="Show IP" style="border-radius: 15px;">
 
     > Sugerencia: utilice el comando show running-config para ver los valores de la máscara de subred para las interfaces.
 
@@ -82,11 +84,11 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
     - ¿Cuál es el nombre del dispositivo al que está conectado? <kbd>Tier3a</kbd>
     
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/g_telnet.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/g_telnet.png" alt="Telnet" style="border-radius: 15px;">
 
 8. Emita el comando show ip route y estudie el resultado. Según la lista de códigos que se muestra al comienzo del resultado, ¿cuáles son los diferentes tipos de rutas que se muestran en la tabla de routing?
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/h_show_ip.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/h_show_ip.png" alt="Show IP" style="border-radius: 15px;">
 
 9. Según el resultado del comando show ip route, ¿cuál es la interfaz de salida de la siguiente dirección IP que se indica en el resultado original del comando tracert?
 
@@ -94,19 +96,19 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
 10. Telnet a la tercera dirección IP de la lista de tracert e inicie sesión. ¿Cuál es el nombre de host del dispositivo actual?
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/j_telnet.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/j_telnet.png" alt="Telnet" style="border-radius: 15px;">
 
     - Emita el comando show ip route connected. ¿Cuáles son las redes conectadas directamente a este router?
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/j2_show_ip_route.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/j2_show_ip_route.png" alt="Show IP route" style="border-radius: 15px;">
 
 11. Telnet a la cuarta dirección IP de la lista de tracert e inicie sesión. ¿Cuál es el nombre del dispositivo?
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/k_telnet.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/k_telnet.png" alt="Telnet" style="border-radius: 15px;">
 
 12. Emita un comando para determinar a qué interfaz está conectado b2server.pt.pka.
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/l_show_ip_interface.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/l_show_ip_interface.png" alt="Show IP Interface" style="border-radius: 15px;">
 
 13. Si utilizó la tabla de registro del esquema de direccionamiento a medida que completó los pasos anteriores, la tabla debería estar completa. Si no es así, termine la tabla.
 
@@ -141,5 +143,5 @@ La empresa para la que usted trabaja ha adquirido una nueva sucursal. Usted soli
 
 14. Con la documentación completa del esquema de direccionamiento y la ruta de Sales a branch2.pt.pka, ahora debería poder dibujar la nueva ubicación de la sucursal en el espacio de registro de la topología que se encuentra a continuación.
 
-    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/documentacion_topologia.png" style="border-radius: 15px;">
+    <img src="https://raw.githubusercontent.com/ElChe1/blog/refs/heads/main/images/packet_tracer/documentacion_topologia.png" alt="Documentación Topologia" style="border-radius: 15px;">
 
