@@ -3,6 +3,6 @@
 icon: fas fa-info-circle
 order: 4
 ---
+🛡️ I'm a student of Administration of Systems and Networks, with a professional focus on Cybersecurity and a passion for Ethical Hacking.
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+🎯 My goal: To work as an Ethical Hacker, helping companies evaluate the security of their systems, identify vulnerabilities and propose effective solutions.
